@@ -1,0 +1,7 @@
+/etc/init.d/networking start
+
+ifconfig eth0 10.44.0.254/16
+
+ifconfig eth1 192.168.44.10/24
+
+route add -net 172.16.44.0/24 gw 192.168.44.20 dev eth1

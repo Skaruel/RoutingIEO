@@ -1,0 +1,8 @@
+/etc/init.d/networking start
+sysctl -w net.ipv6.conf.all.forwarding=1
+
+ifconfig eth0 172.16.44.254/24
+
+ifconfig eth1 192.168.44.20/24
+
+route add -net 10.44.0.0/16 gw 192.168.44.10 dev eth1
